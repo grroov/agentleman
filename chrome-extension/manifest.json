@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Agentleman",
+  "version": "43",
+  "description": "See the soul of your audio! Our Chrome extension uses Gemini Cloud AI to instantly turn the music, news, or videos in your browser into stunning, evolving visual art within a floating window. #SeeYouSound",
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://your-host-here.run.app/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "agentleman.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": "agentleman.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "agentleman.png",
+    "48": "agentleman.png",
+    "128": "agentleman.png"
+  }
+}
